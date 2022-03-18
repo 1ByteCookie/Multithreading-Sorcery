@@ -1,0 +1,12 @@
+dont know why, but it seems std::thread can only recognize
+a limited amount of types.
+
+when i tried to pass a player struct as parameter for a thread,
+it breaks, and cant recognize the type.
+
+
+there's probably a better way to do this, but the idea,
+is to pass whatever parameter as a void* and then
+type cast that pointer to the desired type.
+
+this looks unsafe, the best i've got for now...
