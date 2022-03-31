@@ -19,11 +19,9 @@ int PrintStuff(const std::string& Name, int Number = 0)
 	return 0; //exit code??
 }
 
-// Pass a pointer to a vector of players!
-void PrintAttributes(void* players)
+// absolute cringe
+void PrintAttributes(std::vector<Player>* Players)
 {
-	auto Players = reinterpret_cast< std::vector<Player>* >(players);
-
 	std::cout << "From Thread(" << std::this_thread::get_id() << "):" << std::endl;
 	for (unsigned int i = 0; i < Players->size(); i++)
 	{
